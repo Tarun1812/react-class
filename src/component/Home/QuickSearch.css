@@ -1,0 +1,21 @@
+.quicksearch {
+    width:80%;
+    margin-left: 10%;
+    margin-top: 2%;
+    /* border: 1px solid red; */
+}
+#quickheading {
+    color:#3b2632;
+    display:block;
+    font-size:30px;
+    font-weight:bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.tilecontainer {
+    height:180px;
+    width:31%;
+    display:inline-block;
+    margin-top:5%;
+    margin-left:1%;
+    box-shadow: 10px 20px 10px #3b2632;
+}
