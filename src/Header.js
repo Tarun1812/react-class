@@ -1,20 +1,21 @@
 import React from "react";
 import {Link} from 'react-router-dom'
+import './header.css';
 
 const Header = () => {
     return (
-        <div>
+        <div className="header">
            <nav className="navbar navbar-inverse">
                 <div className="container-fluid">
                     <div className="navbar-header">
-                    <a class="navbar-brand" href="#">Zomato React App</a>
+                    <a className="navbar-brand" href="#">Zomato React App</a>
                     </div>
                     <ul className="nav navbar-nav">
-                    <li class="active"><Link href="#">Home</Link></li>
+                    <li className="active"><Link to="/">Home</Link></li>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><Link href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</Link></li>
-                        <li><Link href="#"><span class="glyphicon glyphicon-log-in"></span> Login</Link></li>
+                    <ul className="nav navbar-nav navbar-right">
+                        <li><Link href="#"><span className="glyphicon glyphicon-user"></span> Sign Up</Link></li>
+                        <li><Link href="#"><span className="glyphicon glyphicon-log-in"></span> Login</Link></li>
                     </ul>
                 </div>
             </nav>

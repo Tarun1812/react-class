@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
-import './QuickSearch.css'
+import QuickDisplay from './QuickDisplay';
+import './QuickSearch.css';
+
+
+const url = "https://zomatoajulypi.herokuapp.com/quicksearch";
 
 class QuickSearch extends Component {
+    constructor (){
+        super()
+
+        this.state={
+            mealType:'',
+        }
+    }
 
     render(){
         return(
@@ -11,17 +22,17 @@ class QuickSearch extends Component {
                         Quick Search by Meal Type
                     </div>
                 </center>
-                <div className='tilecontainer'>
-                    <div className='tilecomponent1'>
-                        <img src='#' alt='meal type' />
-                    </div>
-                    <div className='tilecomponent2'>
-                        <h3>Lunch</h3>
-                        <p>Have a nice Meal</p>
-                    </div>
-                </div>
+                <QuickDisplay mealData={this.state.mealType} />
             </div>
         )
+    }
+    componentDidMount (){
+        fetch(url,{method:'GET'})
+        .then((res) => res.json())
+        // .then((data) => console.log(data))
+        .then((data) => {
+            this.setState({mealType:data})
+        })
     }
 }
 export default QuickSearch;

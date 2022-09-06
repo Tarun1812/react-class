@@ -15,6 +15,7 @@ class Search extends Component {
         }
     }
 
+   
     renderCity = (data) => {
         if (data){
             return data.map((item) => {
@@ -43,7 +44,7 @@ class Search extends Component {
         .then((data) => {this.setState({restData:data}) })
     }
 
-
+   
     render() {
     return(
         <div className="search">
